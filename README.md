@@ -21,7 +21,7 @@ $route = array_merge( $route, $schema_migration_routes() );
 unset($schema_migration_routes);
 ```
 + Access to url: local/app-admin/schema and use user(admin) and password(secret) [config = schema_session_users]
-+ Create file yml [config = schema_path] and use next format yml:
++ Create file table_name.yml [config = schema_path] and use next format yml:
 ```yml
 table_name:
   column_name:
@@ -35,5 +35,6 @@ table_name:
 ```
 + After save file go to dashboard and press run migration
 
+__You can use several tables on 1 file yml but i do not suggest.__
 
 Enjoi it!
