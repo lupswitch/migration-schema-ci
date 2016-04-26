@@ -1,6 +1,10 @@
 # migration-schema-ci
 migration-schema-ci for CodeIgniter Framework
 
+![Preview before migration](https://raw.githubusercontent.com/yonineitor/migration-schema-ci/master/img_02.png)
+![Preview YML](https://raw.githubusercontent.com/yonineitor/migration-schema-ci/master/img_01.png)
+![Preview help](https://raw.githubusercontent.com/yonineitor/migration-schema-ci/master/img_03.png)
+
 Migration from skeleton or schema **YML**
 
 ###Install
