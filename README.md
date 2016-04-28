@@ -27,18 +27,43 @@ unset($schema_migration_routes);
 + Access to url: local/app-admin/schema and use user(admin) and password(secret) [config = schema_session_users]
 + Create file table_name.yml [config = schema_path] and use next format yml:
 ```yml
-table_name:                                     #required
-  column_name:                                  #required
-    type: smallint|int|text|varchar|decimal     #required
-    primary: true|false                         #default = false
-    null: true|false                            #default = false
-    unsigned: true|false                        #default = false
-    auto_increment: true|false                  #default = false
-    _createindex: true|false                    #default = false
-    default: string|number                      #default = null
-    constraint: number                          #default = null (you can prevent constraint if use type = varchar(100) )
+@type_availibles:{smallint,int,text,varchar,decimal,enum,blob,char,timestamp, datetime }
+table_name:                      #required
+  column_name:                   #required
+    type: {@type_availibles}     #required
+    primary: true|false          #default = false
+    null: true|false             #default = false
+    unsigned: true|false         #default = false
+    auto_increment: true|false   #default = false
+    _createindex: true|false     #default = false
+    default: string|number       #default = null
+    constraint: number           #default = null (you can prevent constraint if use type = varchar(100) )
 ```
 + After save file go to dashboard and press run migration
+
+###Example table no comun.
+```yml
+nocomun:
+	my_primary:
+		type: int(4)
+		primary: true
+	my_enum:
+		type: 'enum("a","b","c")'
+		default: a
+	my_decimal:
+		type: decimal
+		constraint: '10,2'
+		default: 1.5
+	my_text:
+		type: text
+	my_blob:
+		type: blob
+	my_char:
+		type: char
+		constraint: 10
+	my_timestamp:
+		type: timestamp
+```
 
 __You can use several tables on 1 file yml but i do not suggest.__
 
