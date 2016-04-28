@@ -27,16 +27,16 @@ unset($schema_migration_routes);
 + Access to url: local/app-admin/schema and use user(admin) and password(secret) [config = schema_session_users]
 + Create file table_name.yml [config = schema_path] and use next format yml:
 ```yml
-table_name:					#required
-  column_name:					#required
-    type: smallint|int|text|varchar|decimal	#required
-    primary: true|false				#default = false
-    null: true|false				#default = false
-    unsigned: true|false			#default = false
-    auto_increment: true|false			#default = false
-    _createindex: true|false			#default = false
-    default: 'string|number'			#default = null
-    constraint: 'number'			#default = null (you can evit constraint if use type = varchar(100) )
+table_name:                                     #required
+  column_name:                                  #required
+    type: smallint|int|text|varchar|decimal     #required
+    primary: true|false                         #default = false
+    null: true|false                            #default = false
+    unsigned: true|false                        #default = false
+    auto_increment: true|false                  #default = false
+    _createindex: true|false                    #default = false
+    default: 'string|number'                    #default = null
+    constraint: 'number'                        #default = null (you can prevent constraint if use type = varchar(100) )
 ```
 + After save file go to dashboard and press run migration
 
