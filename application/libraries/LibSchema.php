@@ -30,8 +30,8 @@ class LibSchema
 		}
 
 		include_once $spyc_path;
-
-		$this->CI->db->db_debug = TRUE;
+		//DEBUG GET IN JSON MSG
+		$this->CI->db->db_debug = FALSE;
 						
 		$schema_table = $this->_item('schema_table');
 
