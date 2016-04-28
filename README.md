@@ -35,8 +35,8 @@ table_name:                                     #required
     unsigned: true|false                        #default = false
     auto_increment: true|false                  #default = false
     _createindex: true|false                    #default = false
-    default: 'string|number'                    #default = null
-    constraint: 'number'                        #default = null (you can prevent constraint if use type = varchar(100) )
+    default: string|number                      #default = null
+    constraint: number                          #default = null (you can prevent constraint if use type = varchar(100) )
 ```
 + After save file go to dashboard and press run migration
 
