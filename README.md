@@ -52,8 +52,7 @@ nocomun:
 		type: 'enum("a","b","c")'
 		default: a
 	my_decimal:
-		type: decimal
-		constraint: '10,2'
+		type: decimal(10,5)
 		default: 1.5
 	my_text:
 		type: text
